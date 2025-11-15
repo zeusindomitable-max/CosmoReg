@@ -1,0 +1,49 @@
+# Eksperimen: CosmoReg vs Layer Normalization
+
+Eksperimen membandingkan performa model dengan Layer Normalization (LN Baseline) dan CosmoReg pada dataset IMDB dengan TensorFlow 2.19.0.
+
+## Persiapan Data
+- Data latih: (25000, 200)
+- Data validasi: (25000, 200)
+- Dataset: IMDB sentiment analysis (diunduh dari `https://storage.googleapis.com/tensorflow/tf-keras-datasets/imdb.npz`)
+
+## Hasil Pelatihan
+
+### Layer Normalization (LN Baseline)
+| Epoch | Loss   | Val Loss | Accuracy | Val Accuracy | Waktu (s) |
+|-------|--------|----------|----------|--------------|-----------|
+| 1     | 0.6823 | 0.4345   | 0.5752   | 0.8238       | 308       |
+| 2     | 0.3620 | 0.2938   | 0.8486   | 0.8740       | 277       |
+| 3     | 0.2552 | 0.3050   | 0.8944   | 0.8725       | 273       |
+| 4     | 0.2229 | 0.3064   | 0.9134   | 0.8732       | 341       |
+| 5     | 0.2075 | 0.3302   | 0.9212   | 0.8677       | 323       |
+| 6     | 0.1932 | 0.3507   | 0.9286   | 0.8664       | 293       |
+| 7     | 0.1766 | 0.3665   | 0.9336   | 0.8602       | 299       |
+| 8     | 0.1665 | 0.3633   | 0.9403   | 0.8614       | 322       |
+| 9     | 0.1586 | 0.3821   | 0.9413   | 0.8588       | 345       |
+| 10    | 0.1550 | 0.4110   | 0.9448   | 0.8576       | 298       |
+
+### CosmoReg
+| Epoch | Loss   | Val Loss | Accuracy | Val Accuracy | Waktu (s) |
+|-------|--------|----------|----------|--------------|-----------|
+| 1     | 0.6842 | 0.3807   | 0.5637   | 0.8337       | 283       |
+| 2     | 0.3443 | 0.3145   | 0.8572   | 0.8716       | 250       |
+| 3     | 0.2856 | 0.3075   | 0.8889   | 0.8735       | 287       |
+| 4     | 0.2542 | 0.3125   | 0.9016   | 0.8747       | 252       |
+| 5     | 0.2319 | 0.3212   | 0.9142   | 0.8692       | 251       |
+| 6     | 0.2145 | 0.3260   | 0.9236   | 0.8678       | 276       |
+| 7     | 0.2084 | 0.3323   | 0.9250   | 0.8685       | 253       |
+| 8     | 0.2027 | 0.3319   | 0.9266   | 0.8696       | 275       |
+| 9     | 0.1979 | 0.3653   | 0.9295   | 0.8602       | 275       |
+| 10    | 0.1901 | 0.3617   | 0.9324   | 0.8643       | 278       |
+
+## Ringkasan Hasil (10 Epochs)
+| Normalisasi        | Val Accuracy Akhir | Val Loss Akhir |
+|--------------------|--------------------|----------------|
+| CosmoReg           | 0.8643             | 0.3617         |
+| Layer Normalization| 0.8576             | 0.4110         |
+
+- **Val Accuracy di Epoch 2**:
+  - CosmoReg: 0.8716
+  - Layer Normalization: 0.8740
+- **Konvergensi**: Layer Normalization lebih cepat atau setara pada awal pelatihan.
