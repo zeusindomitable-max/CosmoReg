@@ -3,6 +3,7 @@
 </div>
 
 
+
 # 🌌 CosmoReg: Cosmology-Inspired Adaptive Regularization for PyTorch
 
 **🌠 Tagline**: Stabilizing the Universe of Neurons: Adaptive, Non-Linear Regularization for High-Stakes Deep Learning  
