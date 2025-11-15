@@ -1,0 +1,23 @@
+# Eksperimen B: L2 Weight Decay (Baseline)
+
+Model MobileNetV2 dibangun dengan L2 Weight Decay (lambda=0.001) pada lapisan Dense.
+
+## Hasil Pelatihan
+
+| Epoch | Loss   | Val Loss | Accuracy | Val Accuracy | Waktu (s) |
+|-------|--------|----------|----------|--------------|-----------|
+| 1     | 0.5733 | 0.3639   | 0.8068   | 0.8790       | 209       |
+| 2     | 0.3344 | 0.3496   | 0.8885   | 0.8821       | 203       |
+| 3     | 0.3167 | 0.3509   | 0.8954   | 0.8823       | 203       |
+| 4     | 0.3100 | 0.3502   | 0.8979   | 0.8822       | 202       |
+| 5     | 0.3057 | 0.3460   | 0.9011   | 0.8870       | 201       |
+| 6     | 0.3018 | 0.3391   | 0.9009   | 0.8851       | 201       |
+| 7     | 0.3008 | 0.3375   | 0.9019   | 0.8871       | 204       |
+| 8     | 0.2992 | 0.3438   | 0.9031   | 0.8862       | 206       |
+| 9     | 0.2998 | 0.3372   | 0.9039   | 0.8852       | 205       |
+| 10    | 0.2977 | 0.3405   | 0.9049   | 0.8877       | 202       |
+
+## Ringkasan
+- **Best Epoch**: Epoch 9 (Val Loss: 0.3372, Val Accuracy: 0.8852)
+- **Final Epoch (10)**: Val Loss: 0.3405, Val Accuracy: 0.8877
+- **Total Waktu Pelatihan**: 2037.13 detik
