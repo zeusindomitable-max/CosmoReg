@@ -1,6 +1,6 @@
-<p align="center">
-  <a href="([https://doi.org/10.5281/zenodo.17615776])">
-    <img src="[(https://doi.org/10.5281/zenodo.17615776).svg"] alt="DOI">
+<p style="text-align: center;">
+  <a href="https://doi.org/10.5281/zenodo.17615776">
+    <img src="https://doi.org/10.5281/zenodo.17615776.svg" alt="DOI">
   </a>
 </p>
 
