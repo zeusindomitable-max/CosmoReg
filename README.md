@@ -1,93 +1,84 @@
-<p style="text-align: center;">
-  <a href="https://doi.org/10.5281/zenodo.17615776">
-    <img src="https://doi.org/10.5281/zenodo.17615776.svg" alt="DOI">
-  </a>
-</p>
-
 # 🌌 CosmoReg: Cosmology-Inspired Adaptive Regularization for PyTorch
 
-### 🌠 Tagline: **Stabilizing the Universe of Neurons: Adaptive, Non-Linear Regularization for High-Stakes Deep Learning.**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python: 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)]()
-[![PyTorch: 1.10+](https://img.shields.io/badge/PyTorch-1.10+-orange.svg)]()
+**🌠 Tagline**: Stabilizing the Universe of Neurons: Adaptive, Non-Linear Regularization for High-Stakes Deep Learning  
+**License**: MIT  
+**Python**: 3.8+  
+**PyTorch**: 1.10+  
+**Author**: Hari Hardiyan (@haritedjamantri)  
+**Date**: November 15, 2025  
+**Location**: Indonesia  
 
 ---
 
 ## ✨ Abstract: The God-Tier Solution to Stability & Efficiency
 
-CosmoReg models neuron activations as particles governed by a **Cosmological Potential ($\phi$)** to solve fundamental deep learning challenges: **model instability** and **costly hyperparameter tuning**.
+CosmoRegLoss models neuron activations as particles governed by a unique Cosmological Potential to tackle deep learning challenges: model instability and costly hyperparameter tuning.
 
-* **🛡️ Stabilization (Quartic Confinement):** The non-linear $\frac{1}{M^2} r^4$ term provides a powerful *restoring force* that **immediately pulls back** exploding activations ($r \gg r_s$), acting as an intrinsic guard against NaN/Inf and model failures.
-* **⚡ Efficiency (Adaptive $\lambda_t$):** The regularization weight ($\lambda_t$) is calculated dynamically based on the task loss gradient ($||\nabla L_{\text{task}}||^2$). This mechanism allows the model to:
-    * **Accelerate** during early, unstable training ($\lambda_t \to 0$).
-    * **Optimize** for peak performance during stable *fine-tuning* ($\lambda_t \to \Lambda_0$).
-    This drastically **reduces manual tuning cost** and **accelerates convergence**.
+- **🛡️ Stabilization**: A powerful restoring force prevents exploding activations, acting as an intrinsic guard against NaN/Inf and model failures.
+- **⚡ Efficiency**: The regularization strength adapts dynamically based on training progress, reducing manual tuning costs and accelerating convergence.
 
 ---
 
 ## 💻 Installation
 
 ### Prerequisites
-
-Ensure you have PyTorch, NumPy, Matplotlib, scikit-learn, and SciPy installed:
+Ensure you have the following installed:
 
 ```bash
 pip install torch numpy matplotlib scikit-learn scipy
 ```
-## Installing CosmoReg (From Local Source)
 
+##Installing CosmoReg (From Source)
+
+Clone the repository and install locally:
 ```bash
-git clone [https://github.com/YourUsername/CosmoReg_MVP.git](https://github.com/YourUsername/CosmoReg_MVP.git)
-cd CosmoReg_MVP
-# Install the package locally for development
+git clone https://github.com/zeusindomitable-max/CosmoReg.git
+cd CosmoReg
 pip install .
 ```
-## 📌 Key Features
 
-•CosmoRegLoss: Single class implementation of the $\phi_{\text{CR}}$ potential.
+## Key Features
 
-•Adaptive $\lambda_t$: Auto-tuning regularization strength based on $\lambda_t = \Lambda_0 e^{-\alpha \cdot ||\nabla L_{\text{task}}||^2}$.
+°CosmoRegLoss: Single-class yg implementation of a novel regularization potential.
 
-•Confinement ($r_s$): Intrinsically prevents dead neurons and exploding activations.
+•Adaptive Regulation: Automatically adjusts strength based on training dynamics.
+
+•Activation Confinement: Prevents dead neurons and unstable activations.
+
+# Empirical Evidence and Superiority (The Proof)
+
+The following results validate CosmoRegLoss's claims. Detailed plots will be added in v1.1.0 as we scale to larger models.
+
+## Proof of Confinement: Activation Histogram
+- **Shows**: The final distribution of neuron activation norms.
+- **Observation**: Tightly centered around an optimal range, confirming stability.
+
+## Proof of Efficiency: Regulation Dynamics
+- **Tracks**: The adaptive regulation weight over training.
+- **Observation**: Starts low for fast learning, then stabilizes for optimal performance.
+
+## Proof of Superiority: Performance Comparison
+- **Compares**: Validation loss of CosmoReg vs Standard L2 Weight Decay.
+- **Observation**: Faster initial drop and lower/stable final loss.
+
+## Benchmark Results
+
+| Dataset         | Model       | Method         | Val Acc | Val Loss |
+|-----------------|-------------|----------------|---------|----------|
+| Fashion-MNIST   | MobileNetV2 | CosmoRegLoss   | 89.01%  | 0.3060   |
+| Fashion-MNIST   | MobileNetV2 | L2 (λ=0.001)   | 88.77%  | 0.3405   |
+| IMDB Sentiment  | Transformer | CosmoRegLoss   | 86.43%  | 0.3617   |
+| IMDB Sentiment  | Transformer | LayerNorm      | 85.76%  | 0.4110   |
+
+**Note**: Trained on free Google Colab (T4 GPU) with limited resources. This is a proof-of-concept (PoC) and requires tuning for large-scale models (70B+).
+
+## Usage
 
 
-
-##📊 Empirical Evidence and Superiority (The Proof)
-The following plots were generated by running the full demo script (e.g., cosmoreg_full_demo.py) to validate our claims.
-
-#1. Proof of Confinement: Activation Histogram
-This plot shows the final distribution of neuron activation norms (∥h 
-i
-
- ∥) from the regulated layer.
-   •Observation: The distribution is tightly centered around the Theoretical Stable Radius ($r_s$), confirming that CosmoReg successfully keeps neuron activations in their optimal working range.
-   
-#2. Proof of Efficiency: Lambda DynamicsThese plots track the adaptive regularization weight ($\lambda_t$) and its relationship with the task loss gradient.
-   •Observation (Left Plot): $\lambda_t$ starts low and steadily increases as training progresses (Epochs), confirming the regulator steps back during unstable learning for fast convergence.
-
-#3. Proof of Superiority:Performance Comparison (A/B Test)
-This plot compares the Validation Loss of Model A (CosmoReg) against Model B (Standard L2 Weight Decay).
-  •Observation: The CosmoReg line shows a faster initial drop and maintains a lower/more stable final validation loss compared to the L2 Decay baseline, confirming its superior performance and stability
-# CosmoReg — Cosmology-Inspired Activation Regularizer
-
-**15 November 2025 — Indonesia**  
-**CosmoReg beats L2 weight decay and Layer Normalization on real benchmarks.**
-
-| Dataset       | Model             | Method      | Val Acc   | Val Loss |
-|---------------|-------------------|-------------|-----------|----------|
-| Fashion-MNIST | MobileNetV2       | **CosmoReg**    | **89.01%** | **0.3060** |
-| Fashion-MNIST | MobileNetV2       | L2 (λ=0.001)    | 88.77%    | 0.3405   |
-| IMDB Sentiment| Transformer       | **CosmoReg**    | **86.43%** | **0.3617** |
-| IMDB Sentiment| Transformer       | LayerNorm       | 85.76%    | 0.4110   |
-
-- Zero or minimal weight decay  
-- No LayerNorm required in some runs  
-- Trained on free Google Colab (Indonesia)
-
-```python
+phyton 
+```bash
 from cosmo_reg import CosmoRegLoss
 
 cosmoreg = CosmoRegLoss(M_scale=1.0, lambda_0=0.01, alpha=0.05)
 loss_reg = cosmoreg(hidden_activations, task_grad_norm_sq)
-  
+```
