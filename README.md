@@ -8,12 +8,19 @@
 
 **🌠 Tagline**: Stabilizing the Universe of Neurons: Adaptive, Non-Linear Regularization for High-Stakes Deep Learning  
 **License**: DUAL LICENSEN  
+
 **Python**: 3.8+  
+
 **PyTorch**: 1.10+  
+
 **Author**: Hari Hardiyan
+
 **Twitter**: @haritedjamantri
+
 **mail**: zeusindomitable@gmail.com
+
 **Date**: November 15, 2025  
+
 **Location**: Indonesia  
 
 ---
