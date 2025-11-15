@@ -1,4 +1,8 @@
-https://doi.org/10.5281/zenodo.17615776
+<p align="center">
+  <a href="([https://doi.org/10.5281/zenodo.17615776])">
+    <img src="[(https://doi.org/10.5281/zenodo.17615776).svg"] alt="DOI">
+  </a>
+</p>
 
 # 🌌 CosmoReg: Cosmology-Inspired Adaptive Regularization for PyTorch
 
