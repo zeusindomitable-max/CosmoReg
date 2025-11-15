@@ -1,3 +1,5 @@
+https://doi.org/10.5281/zenodo.17615776
+
 # 🌌 CosmoReg: Cosmology-Inspired Adaptive Regularization for PyTorch
 
 ### 🌠 Tagline: **Stabilizing the Universe of Neurons: Adaptive, Non-Linear Regularization for High-Stakes Deep Learning.**
