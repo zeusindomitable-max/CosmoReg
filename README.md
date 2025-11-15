@@ -11,8 +11,8 @@
 **Python**: 3.8+  
 **PyTorch**: 1.10+  
 **Author**: Hari Hardiyan
-**Twitter** :@haritedjamantri
-**mail** : zeusindomitable@gmail.com
+**Twitter**: @haritedjamantri
+**mail**: zeusindomitable@gmail.com
 **Date**: November 15, 2025  
 **Location**: Indonesia  
 
